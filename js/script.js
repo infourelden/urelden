@@ -25,10 +25,14 @@ const navLinks = document.querySelector('.nav-links');
 
 if (menuBtn) {
   menuBtn.addEventListener('click', () => {
-    if (navLinks.style.display === 'flex') {
-      navLinks.style.display = 'none';
-    } else {
-      navLinks.style.display = 'flex';
-    }
+    navLinks.classList.toggle('open');
+    menuBtn.textContent = navLinks.classList.contains('open') ? '✕' : '≡';
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.textContent = '≡';
+    });
   });
 }

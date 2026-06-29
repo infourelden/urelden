@@ -769,10 +769,24 @@ footer a:hover {
 @media (max-width: 860px) {
   .nav-links {
     display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: rgba(25, 20, 13, 0.97);
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    font-size: 20px;
+    z-index: 49;
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 
   .menu-btn {
     display: block;
+    z-index: 51;
   }
 
   .hero-grid {
@@ -817,6 +831,46 @@ footer a:hover {
 
   .band {
     padding: 72px 0;
+  }
+
+  .wrap {
+    padding: 0 20px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .strip-in {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .testi p {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .final {
+    padding: 80px 0;
+  }
+
+  .quote-band {
+    padding: 80px 0;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .foot-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
