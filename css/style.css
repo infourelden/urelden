@@ -381,8 +381,9 @@ img {
 .phase-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 18px;
+  line-height: 1;
 }
 
 .phase .num {
@@ -392,13 +393,16 @@ img {
   letter-spacing: 0.1em;
   font-weight: 600;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .phase .arch-ico {
-  width: 28px;
-  height: 32px;
+  width: 20px;
+  height: 24px;
   color: var(--ember);
   flex-shrink: 0;
+  display: block;
+  line-height: 1;
 }
 
 .phase .place {
@@ -407,6 +411,7 @@ img {
   text-transform: uppercase;
   color: var(--stone);
   white-space: nowrap;
+  line-height: 1;
 }
 
 .phase h3 {
