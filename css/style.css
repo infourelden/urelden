@@ -378,43 +378,46 @@ img {
   border-top: 1px solid var(--line);
 }
 
-.phase .num {
-  font-family: var(--display);
-  font-size: 14px;
-  color: var(--ember-dk);
-  letter-spacing: 0.1em;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.phase .arch-ico {
-  width: 24px;
-  height: 28px;
-  color: var(--ember);
-  display: inline-block;
-  margin: 0 8px 0 0;
-  vertical-align: middle;
-}
-
 .phase-header {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
-.phase h3 {
-  font-size: 24px;
-  margin: 14px 0 8px;
+.phase .num {
+  font-family: var(--display);
+  font-size: 16px;
+  color: var(--ember-dk);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.phase .arch-ico {
+  width: 28px;
+  height: 32px;
+  color: var(--ember);
+  flex-shrink: 0;
 }
 
 .phase .place {
-  display: inline-block;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--stone);
-  margin-bottom: 14px;
+  white-space: nowrap;
+}
+
+.phase h3 {
+  font-size: 24px;
+  margin: 0 0 8px 0;
+}
+
+.phase p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #574a36;
 }
 
 .phase p {
