@@ -263,13 +263,63 @@
   </div>
 </section>
 
-<section class="band band--sand final" id="boka">
-  <div class="wrap reveal">
-    <svg class="arch-ico"><use href="#arch"/></svg>
-    <p style="font-family:var(--display);font-style:italic;font-size:clamp(18px,2.4vw,24px);color:var(--ember-dk);margin-bottom:16px">Inte en kurs. Inte en resa. Ditt liv — och brödraskapet som bär det.</p>
-    <h2>Nästa grupp: augusti 2026</h2>
-    <p>Fåtal platser. Det börjar med ett samtal — ingen press, bara ett ärligt snack om var du står.</p>
-    <a class="btn btn--ink" href="mailto:info.urelden@gmail.com">Boka ett samtal</a>
+<section class="band band--sand" id="boka">
+  <div class="wrap">
+    <div class="center reveal">
+      <svg class="arch-ico"><use href="#arch"/></svg>
+      <p style="font-family:var(--display);font-style:italic;font-size:clamp(18px,2.4vw,24px);color:var(--ember-dk);margin-bottom:16px">Inte en kurs. Inte en resa. Ditt liv — och brödraskapet som bär det.</p>
+      <h2>Boka ett samtal</h2>
+      <p class="lead" style="color:#5c4f39;max-width:42ch;margin:14px auto 30px">Fåtal platser till augusti 2026. Fyll i formuläret så hör vi av oss inom 48 timmar — ingen press, bara ett ärligt snack om var du står.</p>
+    </div>
+
+    <form action="https://formspree.io/f/xjgqarjq" method="POST"
+          style="max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:18px">
+
+      <div>
+        <label style="display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:6px">Namn</label>
+        <input type="text" name="namn" required
+          style="width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink)">
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:6px">E-post</label>
+        <input type="email" name="epost" required
+          style="width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink)">
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:6px">Telefon (valfritt)</label>
+        <input type="tel" name="telefon"
+          style="width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink)">
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:6px">Ålder</label>
+        <input type="number" name="alder" min="18" max="99"
+          style="width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink)">
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:6px">Varför söker du dig till Ur Elden just nu?</label>
+        <textarea name="varfor" rows="4" required
+          style="width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink);resize:vertical"></textarea>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);margin-bottom:6px">Har du tidigare erfarenhet av psykedelika?</label>
+        <select name="erfarenhet"
+          style="width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink)">
+          <option value="Nej, ingen alls">Nej, ingen alls</option>
+          <option value="Ja, någon enstaka gång">Ja, någon enstaka gång</option>
+          <option value="Ja, regelbundet">Ja, regelbundet</option>
+        </select>
+      </div>
+
+      <input type="hidden" name="_subject" value="Ny samtalsförfrågan — Ur Elden">
+
+      <button type="submit" class="btn btn--primary" style="border:none;cursor:pointer;margin-top:8px">Skicka och boka samtal</button>
+      <p style="font-size:12.5px;color:#8a7d63;text-align:center">Vi hör av oss inom 48 timmar. Dina uppgifter delas aldrig vidare.</p>
+    </form>
   </div>
 </section>
 
