@@ -383,13 +383,24 @@ img {
   font-size: 14px;
   color: var(--ember-dk);
   letter-spacing: 0.1em;
+  display: inline-block;
+  margin-right: 8px;
 }
 
 .phase .arch-ico {
-  width: 34px;
-  height: 40px;
-  margin: 14px 0 12px;
+  width: 24px;
+  height: 28px;
   color: var(--ember);
+  display: inline-block;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
 }
 
 .phase h3 {
