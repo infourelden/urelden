@@ -904,3 +904,160 @@ footer a:hover {
     scroll-behavior: auto;
   }
 }
+
+/* ===== Eldportaler: klickbar fasikon -> zoom in i värld ===== */
+
+.phase-trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.phase-trigger:hover .arch-ico {
+  transform: scale(1.15);
+}
+.phase-trigger .arch-ico {
+  transition: transform 0.2s ease;
+}
+
+/* subtle pulsing ring behind the icon — signals it's clickable, without touching the icon itself */
+.phase-trigger::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background: radial-gradient(circle, rgba(194, 97, 31, 0.35) 0%, rgba(194, 97, 31, 0) 70%);
+  animation: phasePulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes phasePulse {
+  0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 0.9; }
+  70%  { opacity: 0.15; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+/* zoom flash transition */
+.zoomflash {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(circle, #fff2d0 0%, var(--glow) 30%, transparent 70%);
+  transform: scale(0.1);
+}
+.zoomflash.active {
+  animation: zoomflashGrow 0.7s cubic-bezier(.3,.9,.3,1) forwards;
+}
+@keyframes zoomflashGrow {
+  0%   { opacity: 0; transform: scale(0.05); }
+  35%  { opacity: 1; transform: scale(1.4); }
+  100% { opacity: 0; transform: scale(3.2); }
+}
+
+/* world overlay */
+.world-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  background: var(--ink);
+}
+.world-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.world-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse 90% 65% at 50% 100%, var(--ember-dk) 0%, transparent 60%),
+              linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 40%, var(--ember-dk) 78%, var(--glow) 100%);
+}
+.w-layer { position: absolute; bottom: 0; left: -5%; width: 110%; opacity: 0.85; }
+.w-layer.w-l1 { height: 34%; fill: rgba(0,0,0,.4); }
+.w-layer.w-l2 { height: 24%; fill: rgba(0,0,0,.3); }
+.w-mote {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff6dd 0%, var(--glow) 55%, transparent 75%);
+  animation: wMoteFloat 6s ease-in-out infinite;
+}
+@keyframes wMoteFloat {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50%      { transform: translateY(-26px) translateX(10px); opacity: 1; }
+}
+
+.world-content {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  animation: worldRiseIn 0.7s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes worldRiseIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.world-eyebrow {
+  font-family: var(--body);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream);
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.4);
+}
+.world-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--cream);
+  margin: 0 0 16px;
+  text-shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+.world-body {
+  background: rgba(25, 20, 13, 0.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(243,235,217,.15);
+  border-radius: 16px;
+  padding: 22px 24px;
+  text-align: left;
+}
+.world-body p {
+  font-family: var(--body);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--cream);
+  margin: 0;
+}
+.world-close {
+  margin-top: 22px;
+  background: rgba(243,235,217,.12);
+  border: 1px solid rgba(243,235,217,.3);
+  color: var(--cream);
+  padding: 11px 26px;
+  border-radius: 999px;
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}

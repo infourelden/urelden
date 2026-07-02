@@ -84,7 +84,9 @@
       <div class="phase reveal">
         <div class="phase-header">
           <span class="num">01</span>
-          <svg class="arch-ico"><use href="#arch"/></svg>
+          <button class="phase-trigger" onclick="openWorld(1)" aria-label="Utforska Förberedelse">
+            <svg class="arch-ico"><use href="#arch"/></svg>
+          </button>
           <span class="place">Sverige</span>
         </div>
         <h3>Förberedelse</h3>
@@ -93,7 +95,9 @@
       <div class="phase reveal">
         <div class="phase-header">
           <span class="num">02</span>
-          <svg class="arch-ico"><use href="#arch"/></svg>
+          <button class="phase-trigger" onclick="openWorld(2)" aria-label="Utforska Resan">
+            <svg class="arch-ico"><use href="#arch"/></svg>
+          </button>
           <span class="place">Nederländerna</span>
         </div>
         <h3>Resan</h3>
@@ -102,7 +106,9 @@
       <div class="phase reveal">
         <div class="phase-header">
           <span class="num">03</span>
-          <svg class="arch-ico"><use href="#arch"/></svg>
+          <button class="phase-trigger" onclick="openWorld(3)" aria-label="Utforska Integration">
+            <svg class="arch-ico"><use href="#arch"/></svg>
+          </button>
           <span class="place">Sverige</span>
         </div>
         <h3>Integration</h3>
@@ -504,6 +510,85 @@
     </div>
   </div>
 </footer>
+
+
+<!-- === Eldportaler: klick på fasikonen zoomar in i en värld === -->
+<div class="zoomflash" id="zoomflash"></div>
+
+<div class="world-overlay" data-phase="1" id="world1">
+  <div class="world-bg">
+    <svg class="w-layer w-l1" viewBox="0 0 1200 300" preserveAspectRatio="none"><path d="M0,300 L0,180 L150,120 L300,170 L480,90 L650,160 L820,100 L1000,175 L1200,130 L1200,300 Z"/></svg>
+    <svg class="w-layer w-l2" viewBox="0 0 1200 300" preserveAspectRatio="none"><path d="M0,300 L0,220 L200,160 L420,210 L620,150 L850,205 L1050,170 L1200,215 L1200,300 Z"/></svg>
+    <div class="w-mote" style="width:5px;height:5px;left:20%;top:35%;animation-delay:0s;"></div>
+    <div class="w-mote" style="width:7px;height:7px;left:65%;top:25%;animation-delay:1.2s;"></div>
+    <div class="w-mote" style="width:4px;height:4px;left:80%;top:45%;animation-delay:2.4s;"></div>
+    <div class="w-mote" style="width:6px;height:6px;left:40%;top:20%;animation-delay:.6s;"></div>
+    <div class="w-mote" style="width:5px;height:5px;left:30%;top:55%;animation-delay:1.8s;"></div>
+  </div>
+  <div class="world-content">
+    <p class="world-eyebrow">Fas 01 · Sverige</p>
+    <h3 class="world-title">Förberedelsen</h3>
+    <div class="world-body">
+      <p>Vi möts, sätter intention och bygger trygghet tillsammans. Du lär känna gruppen innan ni reser — ingen kliver in i det okända ensam.</p>
+    </div>
+    <button class="world-close" onclick="closeWorld(1)">Stäng portalen</button>
+  </div>
+</div>
+
+<div class="world-overlay" data-phase="2" id="world2">
+  <div class="world-bg">
+    <svg class="w-layer w-l1" viewBox="0 0 1200 300" preserveAspectRatio="none"><path d="M0,300 L0,190 L180,110 L360,180 L560,80 L740,170 L920,90 L1100,180 L1200,140 L1200,300 Z"/></svg>
+    <svg class="w-layer w-l2" viewBox="0 0 1200 300" preserveAspectRatio="none"><path d="M0,300 L0,230 L220,150 L440,220 L640,140 L880,215 L1080,160 L1200,220 L1200,300 Z"/></svg>
+    <div class="w-mote" style="width:6px;height:6px;left:15%;top:30%;animation-delay:.3s;"></div>
+    <div class="w-mote" style="width:8px;height:8px;left:55%;top:20%;animation-delay:1.5s;"></div>
+    <div class="w-mote" style="width:5px;height:5px;left:75%;top:40%;animation-delay:2.1s;"></div>
+    <div class="w-mote" style="width:7px;height:7px;left:35%;top:50%;animation-delay:.9s;"></div>
+    <div class="w-mote" style="width:4px;height:4px;left:88%;top:22%;animation-delay:2.7s;"></div>
+  </div>
+  <div class="world-content">
+    <p class="world-eyebrow">Fas 02 · Nederländerna</p>
+    <h3 class="world-title">Resan</h3>
+    <div class="world-body">
+      <p>Tre dagar tillsammans, omgivna av natur. En laglig psilocybin-ceremoni, buren av erfarna vägledare, vid sidan av eld, rörelse och stillhet.</p>
+    </div>
+    <button class="world-close" onclick="closeWorld(2)">Stäng portalen</button>
+  </div>
+</div>
+
+<div class="world-overlay" data-phase="3" id="world3">
+  <div class="world-bg">
+    <svg class="w-layer w-l1" viewBox="0 0 1200 300" preserveAspectRatio="none"><path d="M0,300 L0,185 L160,130 L340,175 L520,100 L700,165 L880,110 L1060,175 L1200,145 L1200,300 Z"/></svg>
+    <svg class="w-layer w-l2" viewBox="0 0 1200 300" preserveAspectRatio="none"><path d="M0,300 L0,225 L210,165 L430,215 L630,155 L860,210 L1060,175 L1200,215 L1200,300 Z"/></svg>
+    <div class="w-mote" style="width:6px;height:6px;left:25%;top:32%;animation-delay:.2s;"></div>
+    <div class="w-mote" style="width:5px;height:5px;left:60%;top:22%;animation-delay:1.4s;"></div>
+    <div class="w-mote" style="width:7px;height:7px;left:78%;top:42%;animation-delay:2.2s;"></div>
+    <div class="w-mote" style="width:4px;height:4px;left:38%;top:50%;animation-delay:.7s;"></div>
+    <div class="w-mote" style="width:6px;height:6px;left:85%;top:28%;animation-delay:1.9s;"></div>
+  </div>
+  <div class="world-content">
+    <p class="world-eyebrow">Fas 03 · Sverige</p>
+    <h3 class="world-title">Integration</h3>
+    <div class="world-body">
+      <p>Vi översätter insikterna till verklig förändring i vardagen — och ett brödraskap som består långt efter att resan är över.</p>
+    </div>
+    <button class="world-close" onclick="closeWorld(3)">Stäng portalen</button>
+  </div>
+</div>
+
+<script>
+  function openWorld(n){
+    var flash = document.getElementById('zoomflash');
+    flash.classList.remove('active');
+    void flash.offsetWidth;
+    flash.classList.add('active');
+    setTimeout(function(){
+      document.getElementById('world'+n).classList.add('open');
+    }, 260);
+  }
+  function closeWorld(n){
+    document.getElementById('world'+n).classList.remove('open');
+  }
+</script>
 
 <script src="js/script.js"></script>
 </body>
