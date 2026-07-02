@@ -990,6 +990,21 @@ footer a:hover {
   background: radial-gradient(ellipse 90% 65% at 50% 100%, var(--ember-dk) 0%, transparent 60%),
               linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 40%, var(--ember-dk) 78%, var(--glow) 100%);
 }
+
+/* fase-specifika himlor — från 3D-versionen */
+.world-overlay[data-phase="1"] .world-bg {
+  background: radial-gradient(ellipse 90% 65% at 50% 100%, #6b3a1f 0%, transparent 60%),
+              linear-gradient(180deg, #2a1a30 0%, #8b6db0 25%, #e89b7a 55%, #f7d9a0 100%);
+}
+.world-overlay[data-phase="2"] .world-bg {
+  background: radial-gradient(ellipse 90% 70% at 50% 100%, #7a1f0f 0%, transparent 65%),
+              linear-gradient(180deg, #1a0d08 0%, #6a4a8a 30%, #c25e46 60%, #f3b45e 100%);
+}
+.world-overlay[data-phase="3"] .world-bg {
+  background: radial-gradient(ellipse 90% 60% at 50% 100%, #7a5a2a 0%, transparent 60%),
+              linear-gradient(180deg, #2a2118 0%, #7fa8c0 25%, #d9a878 55%, #f7e6bf 100%);
+}
+
 .w-layer { position: absolute; bottom: 0; left: -5%; width: 110%; opacity: 0.85; }
 .w-layer.w-l1 { height: 34%; fill: rgba(0,0,0,.4); }
 .w-layer.w-l2 { height: 24%; fill: rgba(0,0,0,.3); }
