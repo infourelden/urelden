@@ -374,64 +374,116 @@ img {
 
 .phase {
   position: relative;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 40px 24px 30px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
-.phase-header {
+.phase:hover {
+  transform: translateY(-4px);
+  border-color: var(--ember);
+  background: rgba(194, 97, 31, 0.04);
+  box-shadow: 0 16px 40px rgba(155, 74, 20, 0.12);
+}
+
+.phase:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
+}
+
+.phase-meta {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 18px;
-  line-height: 1;
+  margin-bottom: 6px;
 }
 
 .phase .num {
   font-family: var(--display);
-  font-size: 16px;
+  font-size: 15px;
   color: var(--ember-dk);
   letter-spacing: 0.1em;
   font-weight: 600;
-  flex-shrink: 0;
-  line-height: 1;
-}
-
-.phase .arch-ico {
-  width: 20px;
-  height: 24px;
-  color: var(--ember);
-  flex-shrink: 0;
-  display: block;
   line-height: 1;
 }
 
 .phase .place {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--stone);
-  white-space: nowrap;
   line-height: 1;
 }
 
-.phase h3 {
-  font-size: 24px;
-  margin: 0 0 8px 0;
+/* eldikonen — pulserande ring signalerar klickbarhet */
+.phase-flame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  margin: 6px 0 4px;
 }
 
-.phase p {
-  font-size: 15.5px;
-  line-height: 1.6;
-  color: #574a36;
+.phase-flame::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(194, 97, 31, 0.30) 0%, rgba(194, 97, 31, 0) 70%);
+  animation: phasePulse 2.4s ease-out infinite;
+  pointer-events: none;
 }
 
-.phase .phase-hint {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.phase-flame .arch-ico {
+  position: relative;
+  width: 40px;
+  height: 48px;
   color: var(--ember);
-  opacity: 0.8;
-  margin: 0 0 10px;
+  transition: transform 0.25s ease;
+}
+
+.phase:hover .phase-flame .arch-ico {
+  transform: scale(1.15);
+}
+
+@keyframes phasePulse {
+  0%   { transform: translate(-50%, -50%) scale(0.7); opacity: 0.85; }
+  70%  { opacity: 0.12; }
+  100% { transform: translate(-50%, -50%) scale(1.9); opacity: 0; }
+}
+
+.phase h3 {
+  font-size: 23px;
+  margin: 0;
+}
+
+.phase-cta {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ember);
+  margin-top: 10px;
+  transition: gap 0.2s ease;
+}
+
+.phase:hover .phase-cta {
+  color: var(--ember-dk);
 }
 
 /* ember pull-quote band */
@@ -908,45 +960,7 @@ footer a:hover {
   }
 }
 
-/* ===== Eldportaler: klickbar fasikon -> zoom in i värld ===== */
-
-.phase-trigger {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  display: block;
-  position: relative;
-  line-height: 1;
-  flex-shrink: 0;
-}
-.phase-trigger:hover .arch-ico {
-  transform: scale(1.15);
-}
-.phase-trigger .arch-ico {
-  transition: transform 0.2s ease;
-}
-
-/* subtle pulsing ring behind the icon — signals it's clickable, without touching the icon itself */
-.phase-trigger::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  background: radial-gradient(circle, rgba(194, 97, 31, 0.35) 0%, rgba(194, 97, 31, 0) 70%);
-  animation: phasePulse 2.4s ease-out infinite;
-  pointer-events: none;
-}
-@keyframes phasePulse {
-  0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 0.9; }
-  70%  { opacity: 0.15; }
-  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
-}
+/* ===== Eldportaler: zoom in i värld ===== */
 
 /* zoom flash transition */
 .zoomflash {

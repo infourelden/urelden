@@ -99,8 +99,7 @@
 
 <div class="strip">
   <div class="wrap strip-in">
-    <p class="words">Förberedd. <span>·</span> Prövad. <span>·</span> Förvandlad.</p>
-    <p class="meta">Psilocybin i Nederländerna &nbsp;·&nbsp; Förberedelse &amp; integration i Sverige &nbsp;·&nbsp; Ett brödraskap genom hela resan</p>
+    <p class="words">Förberedd <span>·</span> Prövad <span>·</span> Förvandlad</p>
   </div>
 </div>
 
@@ -115,44 +114,27 @@
     <div class="center reveal">
       <p class="eyebrow">Så fungerar resan</p>
       <h2 style="margin-top:10px">Tre faser, en förvandling</h2>
+      <p style="font-size:15px;color:#6b5d45;margin-top:14px">Klicka på varje eld för att kliva in i fasen.</p>
     </div>
     <div class="phases">
-      <div class="phase reveal">
-        <div class="phase-header">
-          <span class="num">01</span>
-          <button class="phase-trigger" onclick="openWorld(1)" aria-label="Utforska Förberedelse">
-            <svg class="arch-ico"><use href="#arch"/></svg>
-          </button>
-          <span class="place">Sverige</span>
-        </div>
-        <p class="phase-hint">Kliv genom elden ✦</p>
+      <button class="phase reveal" onclick="openWorld(1)" aria-label="Öppna fas 1: Förberedelse">
+        <span class="phase-meta"><span class="num">01</span><span class="place">Sverige</span></span>
+        <span class="phase-flame"><svg class="arch-ico"><use href="#arch"/></svg></span>
         <h3>Förberedelse</h3>
-        <p>Innan ni reser möts ni i grupp, online. Ni sätter intention tillsammans och lär känna varandra — ingen kliver på bussen som främling.</p>
-      </div>
-      <div class="phase reveal">
-        <div class="phase-header">
-          <span class="num">02</span>
-          <button class="phase-trigger" onclick="openWorld(2)" aria-label="Utforska Resan">
-            <svg class="arch-ico"><use href="#arch"/></svg>
-          </button>
-          <span class="place">Nederländerna</span>
-        </div>
-        <p class="phase-hint">Kliv genom elden ✦</p>
+        <span class="phase-cta">Kliv in i elden →</span>
+      </button>
+      <button class="phase reveal" onclick="openWorld(2)" aria-label="Öppna fas 2: Resan">
+        <span class="phase-meta"><span class="num">02</span><span class="place">Nederländerna</span></span>
+        <span class="phase-flame"><svg class="arch-ico"><use href="#arch"/></svg></span>
         <h3>Resan</h3>
-        <p>Tre dagar tillsammans, omgivna av natur. En laglig psilocybin-ceremoni, buren av erfarna vägledare, vid sidan av eld, rörelse och stillhet.</p>
-      </div>
-      <div class="phase reveal">
-        <div class="phase-header">
-          <span class="num">03</span>
-          <button class="phase-trigger" onclick="openWorld(3)" aria-label="Utforska Integration">
-            <svg class="arch-ico"><use href="#arch"/></svg>
-          </button>
-          <span class="place">Sverige</span>
-        </div>
-        <p class="phase-hint">Kliv genom elden ✦</p>
+        <span class="phase-cta">Kliv in i elden →</span>
+      </button>
+      <button class="phase reveal" onclick="openWorld(3)" aria-label="Öppna fas 3: Integration">
+        <span class="phase-meta"><span class="num">03</span><span class="place">Sverige</span></span>
+        <span class="phase-flame"><svg class="arch-ico"><use href="#arch"/></svg></span>
         <h3>Integration</h3>
-        <p>Vi översätter insikterna till verklig förändring i vardagen — och ett brödraskap som består långt efter att resan är över.</p>
-      </div>
+        <span class="phase-cta">Kliv in i elden →</span>
+      </button>
     </div>
   </div>
 </section>
@@ -160,7 +142,7 @@
 <section class="quote-band">
   <div class="wrap reveal">
     <blockquote>
-      <p>Pojken blir inte man av sig själv. Han bärs över — av eld, av natur, av andra män.</p>
+      <p>Elden frågar inte vem du varit. Bara vem du är beredd att bli.</p>
       <cite>Ur Eldens grundtanke</cite>
     </blockquote>
   </div>
@@ -169,15 +151,15 @@
 <section class="band band--ink2" id="foryou">
   <div class="wrap">
     <p class="eyebrow reveal">Det här är för dig som</p>
-    <p class="reveal" style="font-family:var(--display);font-size:clamp(22px,2.8vw,31px);line-height:1.38;color:var(--cream);max-width:24ch;margin:16px 0 6px">Du har gjort allt du blev tillsagd. Pluggat, jobbat, hållit ihop fasaden. Och ändå sitter tomheten kvar. Det här är nästa steg.</p>
+    <p class="reveal" style="font-family:var(--display);font-size:clamp(22px,2.8vw,31px);line-height:1.38;color:var(--cream);max-width:26ch;margin:16px 0 6px">Du har gjort allt du blev tillsagd. Pluggat, jobbat, hållit ihop fasaden. Ändå går du i cirklar — samma ruta, år efter år. Det här är steget ut.</p>
     <div class="foryou">
       <div class="item reveal">
         <h3>Känner att något saknas</h3>
         <p>Men inte riktigt vad. En tomhet bakom det som ser bra ut utåt.</p>
       </div>
       <div class="item reveal">
-        <h3>Går på tomgång</h3>
-        <p>Jobb, skärm, upprepning. Dagarna rullar men leder ingenstans.</p>
+        <h3>Går i cirklar</h3>
+        <p>Samma vecka om och om igen. Du rör dig, men stampar på samma ruta.</p>
       </div>
       <div class="item reveal">
         <h3>Söker riktning</h3>
@@ -216,7 +198,10 @@
     -->
 
     <p class="reveal" style="font-family:var(--display);font-size:clamp(19px,2.4vw,25px);line-height:1.5;color:var(--cream);margin-top:44px;max-width:640px;text-align:center;margin-left:auto;margin-right:auto">Vi är här för att bära, inte för att leka guru. Ur Elden är inte en lösning vi säljer — det är vägen vi har gått, och som vi nu delar med män som vågar samma sak.</p>
-    <p class="reveal" style="font-size:14px;color:var(--cream-mut);margin-top:18px;text-align:center">Vill du veta vilka vi är? <a href="#boka" style="color:var(--glow);text-decoration:underline">Boka ett samtal</a> — vi berättar gärna, ansikte mot ansikte.</p>
+    <p class="reveal" style="font-size:15.5px;line-height:1.7;color:var(--cream-mut);margin-top:24px;max-width:600px;text-align:center;margin-left:auto;margin-right:auto">Vi håller våra namn privata utåt — vi har yrken där det här kan misstolkas. Det handlar inte om att gömma sig, utan om att skydda arbetet. Du möter oss som vi är i det första samtalet, ansikte mot ansikte, innan du bestämmer dig för något.</p>
+    <div class="center reveal" style="margin-top:28px">
+      <a class="btn btn--ghost" href="#boka">Boka ett samtal så berättar vi mer</a>
+    </div>
   </div>
 </section>
 
