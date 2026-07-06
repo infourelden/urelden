@@ -425,10 +425,13 @@ img {
   color: #574a36;
 }
 
-.phase p {
-  font-size: 15.5px;
-  line-height: 1.6;
-  color: #574a36;
+.phase .phase-hint {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ember);
+  opacity: 0.8;
+  margin: 0 0 10px;
 }
 
 /* ember pull-quote band */
@@ -1075,4 +1078,221 @@ footer a:hover {
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+}
+
+/* ===== hero-glöd: subtil ember-atmosfär bakom hjälten ===== */
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -30%;
+  transform: translateX(-50%);
+  width: 130%;
+  height: 90%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(194, 97, 31, 0.18),
+    rgba(231, 176, 105, 0.05) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* ===== trygghetskort ===== */
+.safe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.safe {
+  padding-left: 18px;
+  border-left: 2px solid var(--ember);
+}
+
+.safe h3 {
+  font-size: 21px;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+
+.safe p {
+  font-size: 14.5px;
+  color: var(--cream-mut);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.safe p:last-child {
+  margin-bottom: 0;
+}
+
+.safe .legal-note {
+  font-size: 12.5px;
+  font-style: italic;
+  padding: 10px 12px;
+  background: rgba(243, 235, 217, 0.06);
+  border-left: 2px solid var(--glow);
+  color: var(--cream-mut);
+}
+
+@media (max-width: 860px) {
+  .safe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== priskort ===== */
+.price-card {
+  max-width: 620px;
+  margin: 48px auto 0;
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 42px 34px 38px;
+  text-align: center;
+}
+
+.price-card .price {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ember-dk);
+}
+
+.price-card .price-sub {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--stone);
+  margin-top: 8px;
+}
+
+.price-card ul {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  margin: 24px 0 28px;
+  padding: 0;
+}
+
+.price-card li {
+  position: relative;
+  padding: 5px 0 5px 26px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #574a36;
+}
+
+.price-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ember);
+}
+
+.price-card .assure {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #6b5d45;
+}
+
+/* ===== FAQ-accordion ===== */
+.faq-list {
+  max-width: 680px;
+  margin: 44px auto 0;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  font-family: var(--display);
+  font-size: 24px;
+  line-height: 1;
+  color: var(--ember);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item summary:hover {
+  background: var(--sand-2);
+}
+
+.faq-item .faq-a {
+  padding: 2px 20px 20px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #574a36;
+}
+
+.faq-item .faq-a a {
+  color: var(--ember-dk);
+  text-decoration: underline;
+}
+
+/* ===== formulär: samtycke ===== */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #6b5d45;
+}
+
+.consent input {
+  margin-top: 3px;
+  accent-color: var(--ember);
+  flex: none;
+}
+
+.consent a {
+  color: var(--ember-dk);
+  text-decoration: underline;
+}
+
+/* ===== tillgänglighet & varumärkesdetaljer ===== */
+:focus-visible {
+  outline: 2px solid var(--glow);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--ember);
+  color: var(--paper);
 }
