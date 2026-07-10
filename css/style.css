@@ -1112,6 +1112,43 @@ footer a:hover {
   pointer-events: none;
 }
 
+/* ===== meritrad (om oss) ===== */
+.creds-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 44px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid rgba(243, 235, 217, 0.14);
+}
+
+.cred {
+  text-align: center;
+}
+
+.cred-num {
+  display: block;
+  font-family: var(--display);
+  font-size: 19px;
+  color: var(--ember);
+  margin-bottom: 8px;
+}
+
+.cred-label {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--cream-mut);
+}
+
+@media (max-width: 860px) {
+  .creds-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+}
+
 /* ===== trygghetskort ===== */
 .safe-grid {
   display: grid;
