@@ -470,6 +470,7 @@ img {
 .phase h3 {
   font-size: 23px;
   margin: 0;
+  color: var(--ink);
 }
 
 .phase-cta {
