@@ -900,7 +900,11 @@ footer a:hover {
 
   .hero {
     min-height: auto;
-    padding: 120px 0 64px;
+    padding: 120px 0 120px;
+  }
+
+  .hero-center {
+    margin-bottom: 60px;
   }
 
   .hero-meta {
