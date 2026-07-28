@@ -880,13 +880,16 @@ footer a:hover {
     display: none;
     flex-direction: column;
     position: fixed;
-    inset: 0;
-    background: rgba(25, 20, 13, 0.97);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(25, 20, 13, 0.98);
     justify-content: center;
     align-items: center;
     gap: 28px;
     font-size: 20px;
-    z-index: 49;
+    z-index: 100;
   }
 
   .nav-links.open {
@@ -895,7 +898,7 @@ footer a:hover {
 
   .menu-btn {
     display: block;
-    z-index: 51;
+    z-index: 101;
   }
 
   .hero {
