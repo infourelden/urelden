@@ -27,12 +27,14 @@ if (menuBtn) {
   menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('open');
     menuBtn.textContent = navLinks.classList.contains('open') ? '✕' : '≡';
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuBtn.textContent = '≡';
+      document.body.style.overflow = '';
     });
   });
 }
