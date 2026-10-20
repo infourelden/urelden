@@ -304,11 +304,13 @@ img {
   left: 50%;
   bottom: 26px;
   transform: translateX(-50%);
-  color: var(--cream-mut);
+  color: var(--cream);
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 1;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+  z-index: 2;
 }
 
 /* generic band */
