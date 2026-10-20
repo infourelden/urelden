@@ -304,13 +304,39 @@ img {
   left: 50%;
   bottom: 26px;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  background: rgba(25, 20, 13, 0.45);
+  border: 1px solid rgba(243, 235, 217, 0.22);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
   color: var(--cream);
   font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  opacity: 1;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
   z-index: 2;
+}
+
+.scrollcue::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid var(--ember);
+  animation: scrollpulse 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollpulse {
+  0%, 100% { transform: translateY(-2px); opacity: 0.45; }
+  50% { transform: translateY(3px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollcue::after { animation: none; }
 }
 
 /* generic band */
