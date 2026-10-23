@@ -1179,41 +1179,48 @@ footer a:hover {
   pointer-events: none;
 }
 
-/* ===== meritrad (om oss) ===== */
-.creds-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  max-width: 900px;
+/* ===== om oss: videoplatshållare ===== */
+.about-video {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 760px;
+  aspect-ratio: 16 / 9;
   margin: 44px auto 0;
-  padding-top: 32px;
-  border-top: 1px solid rgba(243, 235, 217, 0.14);
+  border: 1px solid rgba(243, 235, 217, 0.14);
+  border-radius: 10px;
+  background:
+    radial-gradient(ellipse at center, rgba(194, 97, 31, 0.16), transparent 65%),
+    var(--ink-2);
 }
 
-.cred {
-  text-align: center;
+.about-video-play {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ember);
+  position: relative;
 }
 
-.cred-num {
-  display: block;
-  font-family: var(--display);
-  font-size: 19px;
-  color: var(--ember);
-  margin-bottom: 8px;
+.about-video-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -50%);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 18px solid var(--ember);
 }
 
-.cred-label {
-  display: block;
-  font-size: 12.5px;
-  line-height: 1.5;
+.about-video-label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--cream-mut);
-}
-
-@media (max-width: 860px) {
-  .creds-row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px 20px;
-  }
 }
 
 /* ===== platsen (gård) ===== */
