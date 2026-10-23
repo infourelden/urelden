@@ -12,6 +12,10 @@
   --stone: #6e5b3e;
   --line: #cdbd9c;
   --maxw: 1140px;
+  /* typografiskt avståndssystem */
+  --sp-eyebrow: 10px; /* eyebrow → rubrik */
+  --sp-lead: 16px; /* rubrik → ingress / stycke */
+  --sp-content: 48px; /* sektionshuvud → innehåll */
   --display: "Fraunces", Georgia, serif;
   --body: "Hanken Grotesk", -apple-system, system-ui, sans-serif;
 }
@@ -429,7 +433,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
-  margin-top: 54px;
+  margin-top: var(--sp-content);
 }
 
 .phase {
@@ -604,7 +608,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 50px;
+  margin-top: var(--sp-content);
 }
 
 .foryou .item h3 {
@@ -629,7 +633,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  margin-top: 44px;
+  margin-top: var(--sp-content);
 }
 
 .card {
@@ -683,7 +687,7 @@ img {
 }
 
 .note {
-  margin-top: 26px;
+  margin-top: 28px;
   font-size: 14px;
   color: #6b5d45;
   text-align: center;
@@ -697,7 +701,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
-  margin-top: 50px;
+  margin-top: var(--sp-content);
 }
 
 .guide {
@@ -754,7 +758,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  margin-top: 46px;
+  margin-top: var(--sp-content);
   border: 1px solid var(--line);
 }
 
@@ -1189,7 +1193,7 @@ footer a:hover {
   gap: 18px;
   max-width: 760px;
   aspect-ratio: 16 / 9;
-  margin: 44px auto 0;
+  margin: var(--sp-content) auto 0;
   border: 1px solid rgba(243, 235, 217, 0.14);
   border-radius: 10px;
   background:
@@ -1228,7 +1232,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  margin-top: 46px;
+  margin-top: var(--sp-content);
 }
 
 .venue-feat {
@@ -1253,7 +1257,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  margin-top: 50px;
+  margin-top: var(--sp-content);
 }
 
 .gallery-item {
@@ -1431,7 +1435,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 50px;
+  margin-top: var(--sp-content);
 }
 
 .safe {
@@ -1533,7 +1537,7 @@ footer a:hover {
 /* ===== FAQ-accordion ===== */
 .faq-list {
   max-width: 680px;
-  margin: 44px auto 0;
+  margin: var(--sp-content) auto 0;
 }
 
 .faq-item {

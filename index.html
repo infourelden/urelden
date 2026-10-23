@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -118,7 +118,7 @@
     <div class="center reveal">
       <p class="eyebrow">Så fungerar resan</p>
       <h2 style="margin-top:10px">Tre faser, en förvandling</h2>
-      <p style="font-size:15px;color:#6b5d45;margin-top:14px">Klicka på eldikonen för att utforska fasen.</p>
+      <p style="font-size:15px;color:#6b5d45;margin-top:var(--sp-lead)">Klicka på eldikonen för att utforska fasen.</p>
     </div>
     <div class="phases">
       <button class="phase reveal" onclick="openWorld(1)" aria-label="Öppna fas 1: Förberedelse">
@@ -155,7 +155,7 @@
 <section class="band band--ink2" id="foryou">
   <div class="wrap">
     <p class="eyebrow reveal">Det här är för dig som</p>
-    <p class="reveal" style="font-family:var(--display);font-size:clamp(22px,2.8vw,31px);line-height:1.38;color:var(--cream);max-width:26ch;margin:16px 0 6px">Du har gjort allt du blev tillsagd. Pluggat, jobbat, hållit ihop fasaden. Ändå går du i cirklar — samma ruta, år efter år. Det här är steget ut.</p>
+    <p class="reveal" style="font-family:var(--display);font-size:clamp(22px,2.8vw,31px);line-height:1.38;color:var(--cream);max-width:26ch;margin:var(--sp-eyebrow) 0 0">Du har gjort allt du blev tillsagd. Pluggat, jobbat, hållit ihop fasaden. Ändå går du i cirklar — samma ruta, år efter år. Det här är steget ut.</p>
     <div class="foryou">
       <div class="item reveal">
         <h3>Känner att något saknas</h3>
@@ -185,7 +185,7 @@
       <span class="about-video-label">Introduktionsvideo kommer snart</span>
     </div>
 
-    <p class="reveal" style="font-size:16.5px;line-height:1.7;color:var(--cream-mut);margin-top:30px;max-width:560px;text-align:center;margin-left:auto;margin-right:auto">Inom kort lägger jag upp en kort video där jag presenterar mig själv, berättar varför Ur Elden finns och vad du kan förvänta dig. Då får du en bild av vem jag är innan du bestämmer dig för något.</p>
+    <p class="reveal" style="font-size:16.5px;line-height:1.7;color:var(--cream-mut);margin-top:28px;max-width:560px;text-align:center;margin-left:auto;margin-right:auto">Inom kort lägger jag upp en kort video där jag presenterar mig själv, berättar varför Ur Elden finns och vad du kan förvänta dig. Då får du en bild av vem jag är innan du bestämmer dig för något.</p>
     <div class="center reveal" style="margin-top:28px">
       <a class="btn btn--ghost" href="#boka">Boka ett samtal</a>
     </div>
@@ -390,7 +390,7 @@
     </div>
 
     <!-- Praktisk info -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-top:36px;max-width:800px;margin-left:auto;margin-right:auto;text-align:center">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-top:var(--sp-content);max-width:800px;margin-left:auto;margin-right:auto;text-align:center">
       <div>
         <p style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin-bottom:10px">Datum</p>
         <p style="font-weight:500;font-size:15px">Fre 26 – sön 28 mars 2027</p>
@@ -434,7 +434,7 @@
       <p class="eyebrow">Från tidigare deltagare</p>
       <h2 style="margin-top:10px;color:var(--cream)">Vad sägde de?</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:44px;max-width:900px;margin-left:auto;margin-right:auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:var(--sp-content);max-width:900px;margin-left:auto;margin-right:auto">
       <div class="reveal" style="background:rgba(243,235,217,.08);padding:28px;border-radius:4px;border-left:3px solid var(--ember)">
         <p style="font-size:15px;line-height:1.7;color:var(--cream);font-style:italic;margin-bottom:16px">"Citat"</p>
         <p style="font-size:13px;color:var(--cream-mut);letter-spacing:.04em;text-transform:uppercase">Namn, ålder, stad</p>
@@ -502,7 +502,7 @@
       <svg class="arch-ico"><use href="#arch"/></svg>
       <p style="font-family:var(--display);font-style:italic;font-size:clamp(18px,2.4vw,24px);color:var(--ember-dk);margin-bottom:16px">Det finns en version av dig på andra sidan elden. Han väntar inte för evigt.</p>
       <h2>Boka ett samtal</h2>
-      <p class="lead" style="color:#5c4f39;max-width:42ch;margin:14px auto 30px">Fåtal platser till mars 2027. Fyll i formuläret så hör vi av oss inom 48 timmar — ingen press, bara ett ärligt snack om var du står.</p>
+      <p class="lead" style="color:#5c4f39;max-width:42ch;margin:var(--sp-lead) auto 30px">Fåtal platser till mars 2027. Fyll i formuläret så hör vi av oss inom 48 timmar — ingen press, bara ett ärligt snack om var du står.</p>
     </div>
 
     <form action="https://formspree.io/f/xjgqarjq" method="POST"
